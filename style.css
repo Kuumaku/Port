@@ -1,0 +1,307 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --primarycolor: white;
+    --secondarycolor: violet;
+    --fontcolor: black;
+}
+
+.dark{
+    --primarycolor: gray;
+    --secondarycolor: violet;
+    --fontcolor: white;
+}
+
+
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--primarycolor);
+    box-sizing: border-box;
+    color: var(--fontcolor);
+}
+
+nav{
+    background-color: blueviolet;
+    height: 80px;
+    width: 100%;
+}
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+a.active, a:hover{
+    background-color: darkmagenta;
+    transition: .5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media (max-width: 800px) {
+    nav{
+        position: sticky;
+        display: block;
+    }
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media (max-width: 800px) {
+    nav{
+        position: fixed;
+        display: block;
+    }
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 1000vh;
+        background-color: violet;
+        top: 80px;
+        left: 0;
+        text-align: center;
+        transition: all .5s;
+        left: -100%;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: darkorchid;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+.welcomepage{
+    padding-top: 200px;
+    text-align: center;
+    height: 850px;
+}
+.welcomepage b{
+    font-size: 85px;
+    text-shadow: 0 0 10px;
+    color: darkmagenta;
+}
+
+.welcomepage p{
+    font-size: 40px;
+}
+
+.profile{
+    height: 850px;
+    text-align: center;
+}
+.profile b{
+    font-size: 85px;
+    color: darkmagenta;
+    text-align: center;
+    text-shadow: 0 0 10px;
+}
+
+
+.profile p{
+    font-size: 75px;
+    text-align: center;
+}
+
+.profile img{
+    height: 350px;
+    border-radius: 10px;
+}
+
+
+.Education{
+    text-align: center;
+    height: 900px;
+    
+}
+
+.Education b{
+    font-size: 75px;
+    color: darkmagenta;
+    text-shadow: 0 0 10px;
+}
+
+.Education img{
+    width: 150px;
+}
+
+.Education p{
+    text-align: center;
+    font-size: 25px;
+}
+
+.skill{
+    text-align: center;
+    height: 850px;
+    margin-top: 150px;
+}
+
+.skill b{
+    font-size: 85px;
+    text-shadow: 0 0 10px;
+    color: darkmagenta;
+}
+
+.skill img{
+    width: 150px;
+}
+
+.contact{
+    text-align: center;
+    margin-top: 80px;
+}
+
+.contact b{
+    color: darkmagenta;
+    text-shadow: 0 0 10px;
+    font-size: 85px;
+}
+
+.contact img{
+    width: 100px;
+    cursor: pointer;
+}
+
+.contact img:hover{
+    width: 120px;
+}
+
+.contact p{
+    font-size: 60px;
+}
+
+
+/*welcomepage responsive*/
+@media (max-width: 800px) {
+    .welcomepage{
+        width: 100%;
+        height: 450px;
+        padding-top: 150px;
+    }
+    .welcomepage b{
+        font-size: 45px;
+    }
+    .welcomepage p{
+        font-size: 30px;
+    }
+}
+
+/*Profile responsive*/
+@media (max-width: 800px) {
+    .profile{
+        width: 100%;
+        height: 450px;
+        padding-top: 150px;
+    }
+    .profile b{
+        font-size: 45px;
+    }
+    .profile p{
+        font-size: 35px;
+    }
+    
+}
+
+/*Education responsive*/
+@media (max-width: 800px) {
+    .Education{
+        width: 100%;
+        height: 450px;
+        padding-top: 450px;
+    }
+    .Education b{
+        font-size: 45px;
+    }
+    .Education p{
+        font-size: 35px;
+    }
+}
+
+/*Skills responsive*/
+@media (max-width: 800px) {
+    .skill{
+        height: 450px;
+        padding-top: 1100px;
+        width: 100%;
+    }
+    .skill b{
+        font-size: 45px;
+    }
+    .skill img{
+        width: 150px;
+    }
+}
+
+/*contact responsive*/
+@media (max-width: 800px) {
+    .contact{
+        width: 100%;
+        height: 450px;
+        padding-top: 750px;
+    }
+    .contact b{
+        font-size: 45px;
+    }
+    .contact p{
+        font-size: 20px;
+    }
+}
+
+#icon{
+    width: 75px;
+    cursor: pointer;
+}
